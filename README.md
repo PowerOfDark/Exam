@@ -31,17 +31,17 @@ Nasz wygenerowany 'problem set' wygląda tak:
 uuid: 541626a0-1528-453f-888b-40ca42e67793
 title: My problem set
 question_defaults: # Parametry domyślne podczas tworzenia pytania
-  				   # można edytować poleceniem 'set-defaults' lub manualnie.
-  id: ''		   			# unikalne, krótkie ID pytania
+                                        # można edytować poleceniem 'set-defaults' lub manualnie.
+  id: ''		   		# unikalne, krótkie ID pytania
   text: ''         			# treść pytania
   num_answers: 4   			# liczba losowanych odpowiedzi
-  num_correct_answers: 1    # liczba losowanych poprawnych odpowiedzi
-  is_multiple_choice: false # czy jest wielokrotnego wyboru
+  num_correct_answers: 1    		# liczba losowanych poprawnych odpowiedzi
+  is_multiple_choice: false 		# czy jest wielokrotnego wyboru
   likelihood: 1				# prawdopodobieństwo wylosowania
-  points: 1					# maksymalna liczba punktów
+  points: 1				# maksymalna liczba punktów
   grader: binary			# typ oceniania (graders.py)
-  								# 'binary' - 0 lub maks. gdy wszystko dobrze
-								# 'linear' - proporcjonalnie do liczby dobrych
+                                        # 'binary' - 0 lub maks. gdy wszystko dobrze
+                                        # 'linear' - proporcjonalnie do liczby dobrych
 ```
 
 
