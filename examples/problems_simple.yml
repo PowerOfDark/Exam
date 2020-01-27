@@ -1,0 +1,27 @@
+uuid: 80d843fb-7156-448a-83a0-f9f2c275b438
+title: Math questions
+questions:
+  q1:
+    text: 'The expression `2^2^3` is equal to'
+    is_multiple_choice: yes
+    num_correct_answers: 2
+    points: 4
+    answers:
+      - text: '2^8'
+        is_correct: yes
+      - text: '256'
+        is_correct: yes
+      - text: '0x100'
+        is_correct: yes
+      - text: '64'
+      - text: '2^4'
+      - text: '223'
+    grader: 'linear'
+question_defaults:
+  text: ''
+  num_answers: 4
+  num_correct_answers: 1
+  is_multiple_choice: false
+  likelihood: 1
+  points: 1
+  grader: binary

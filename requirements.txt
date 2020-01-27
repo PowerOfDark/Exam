@@ -1,0 +1,16 @@
+Click==7.0
+colorama==0.4.3
+cycler==0.10.0
+docutils==0.16
+future==0.18.2
+Kivy==1.11.1
+matplotlib>=3.0.0
+more-itertools==8.1.0
+numpy>=1.15.0
+Pygments==2.5.2
+pytest==5.3.4
+PyYAML==5.3
+related==0.7.2
+requests==2.22.0
+six==1.14.0
+urllib3==1.25.8

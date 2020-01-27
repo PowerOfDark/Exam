@@ -1,0 +1,360 @@
+uuid: 795605c8-af43-4a1c-9e64-96fa6ee7dc94
+title: Test problem set
+questions:
+  '0':
+    text: 'Question #0'
+    num_answers: 5
+    num_correct_answers: 1
+    is_multiple_choice: false
+    likelihood: 1
+    points: 1
+    answers:
+    - text: Correct Answer 1
+      is_correct: true
+      likelihood: 1
+      id: 1
+    - text: Answer 2
+      is_correct: false
+      likelihood: 1
+      id: 2
+    - text: Answer 3
+      is_correct: false
+      likelihood: 1
+      id: 3
+    - text: Answer 4
+      is_correct: false
+      likelihood: 1
+      id: 4
+    - text: Answer 5
+      is_correct: false
+      likelihood: 1
+      id: 5
+    grader: binary
+  '1':
+    text: 'Question #1'
+    num_answers: 5
+    num_correct_answers: 3
+    is_multiple_choice: true
+    likelihood: 1
+    points: 4
+    answers:
+    - text: Correct Answer 1
+      is_correct: true
+      likelihood: 1
+      id: 1
+    - text: Correct Answer 2
+      is_correct: true
+      likelihood: 1
+      id: 2
+    - text: Correct Answer 3
+      is_correct: true
+      likelihood: 1
+      id: 3
+    - text: Answer 4
+      is_correct: false
+      likelihood: 1
+      id: 4
+    - text: Answer 5
+      is_correct: false
+      likelihood: 1
+      id: 5
+    grader: linear
+  '2':
+    text: 'Question #2'
+    num_answers: 5
+    num_correct_answers: 2
+    is_multiple_choice: true
+    likelihood: 1
+    points: 1
+    answers:
+    - text: Correct Answer 1
+      is_correct: true
+      likelihood: 1
+      id: 1
+    - text: Correct Answer 2
+      is_correct: true
+      likelihood: 1
+      id: 2
+    - text: Answer 3
+      is_correct: false
+      likelihood: 1
+      id: 3
+    - text: Answer 4
+      is_correct: false
+      likelihood: 1
+      id: 4
+    - text: Answer 5
+      is_correct: false
+      likelihood: 1
+      id: 5
+    grader: binary
+  '3':
+    text: 'Question #3'
+    num_answers: 5
+    num_correct_answers: 1
+    is_multiple_choice: false
+    likelihood: 1
+    points: 1
+    answers:
+    - text: Correct Answer 1
+      is_correct: true
+      likelihood: 1
+      id: 1
+    - text: Answer 2
+      is_correct: false
+      likelihood: 1
+      id: 2
+    - text: Answer 3
+      is_correct: false
+      likelihood: 1
+      id: 3
+    - text: Answer 4
+      is_correct: false
+      likelihood: 1
+      id: 4
+    - text: Answer 5
+      is_correct: false
+      likelihood: 1
+      id: 5
+    grader: linear
+  '4':
+    text: 'Question #4'
+    num_answers: 5
+    num_correct_answers: 1
+    is_multiple_choice: false
+    likelihood: 1
+    points: 1
+    answers:
+    - text: Correct Answer 1
+      is_correct: true
+      likelihood: 1
+      id: 1
+    - text: Answer 2
+      is_correct: false
+      likelihood: 1
+      id: 2
+    - text: Answer 3
+      is_correct: false
+      likelihood: 1
+      id: 3
+    - text: Answer 4
+      is_correct: false
+      likelihood: 1
+      id: 4
+    - text: Answer 5
+      is_correct: false
+      likelihood: 1
+      id: 5
+    grader: binary
+  '5':
+    text: 'Question #5'
+    num_answers: 5
+    num_correct_answers: 4
+    is_multiple_choice: true
+    likelihood: 1
+    points: 2
+    answers:
+    - text: Correct Answer 1
+      is_correct: true
+      likelihood: 1
+      id: 1
+    - text: Correct Answer 2
+      is_correct: true
+      likelihood: 1
+      id: 2
+    - text: Correct Answer 3
+      is_correct: true
+      likelihood: 1
+      id: 3
+    - text: Correct Answer 4
+      is_correct: true
+      likelihood: 1
+      id: 4
+    - text: Answer 5
+      is_correct: false
+      likelihood: 1
+      id: 5
+    grader: linear
+  '6':
+    text: 'Question #6'
+    num_answers: 5
+    num_correct_answers: 1
+    is_multiple_choice: false
+    likelihood: 1
+    points: 1
+    answers:
+    - text: Correct Answer 1
+      is_correct: true
+      likelihood: 1
+      id: 1
+    - text: Answer 2
+      is_correct: false
+      likelihood: 1
+      id: 2
+    - text: Answer 3
+      is_correct: false
+      likelihood: 1
+      id: 3
+    - text: Answer 4
+      is_correct: false
+      likelihood: 1
+      id: 4
+    - text: Answer 5
+      is_correct: false
+      likelihood: 1
+      id: 5
+    grader: binary
+  '7':
+    text: 'Question #7'
+    num_answers: 5
+    num_correct_answers: 2
+    is_multiple_choice: true
+    likelihood: 1
+    points: 1
+    answers:
+    - text: Correct Answer 1
+      is_correct: true
+      likelihood: 1
+      id: 1
+    - text: Correct Answer 2
+      is_correct: true
+      likelihood: 1
+      id: 2
+    - text: Answer 3
+      is_correct: false
+      likelihood: 1
+      id: 3
+    - text: Answer 4
+      is_correct: false
+      likelihood: 1
+      id: 4
+    - text: Answer 5
+      is_correct: false
+      likelihood: 1
+      id: 5
+    grader: linear
+  '8':
+    text: 'Question #8'
+    num_answers: 5
+    num_correct_answers: 4
+    is_multiple_choice: true
+    likelihood: 1
+    points: 2
+    answers:
+    - text: Correct Answer 1
+      is_correct: true
+      likelihood: 1
+      id: 1
+    - text: Correct Answer 2
+      is_correct: true
+      likelihood: 1
+      id: 2
+    - text: Correct Answer 3
+      is_correct: true
+      likelihood: 1
+      id: 3
+    - text: Correct Answer 4
+      is_correct: true
+      likelihood: 1
+      id: 4
+    - text: Answer 5
+      is_correct: false
+      likelihood: 1
+      id: 5
+    grader: binary
+  '9':
+    text: 'Question #9'
+    num_answers: 5
+    num_correct_answers: 1
+    is_multiple_choice: false
+    likelihood: 1
+    points: 1
+    answers:
+    - text: Correct Answer 1
+      is_correct: true
+      likelihood: 1
+      id: 1
+    - text: Answer 2
+      is_correct: false
+      likelihood: 1
+      id: 2
+    - text: Answer 3
+      is_correct: false
+      likelihood: 1
+      id: 3
+    - text: Answer 4
+      is_correct: false
+      likelihood: 1
+      id: 4
+    - text: Answer 5
+      is_correct: false
+      likelihood: 1
+      id: 5
+    grader: binary
+  '10':
+    text: 'Question #10'
+    num_answers: 5
+    num_correct_answers: 1
+    is_multiple_choice: false
+    likelihood: 1
+    points: 5
+    answers:
+    - text: Correct Answer 1
+      is_correct: true
+      likelihood: 1
+      id: 1
+    - text: Answer 2
+      is_correct: false
+      likelihood: 1
+      id: 2
+    - text: Answer 3
+      is_correct: false
+      likelihood: 1
+      id: 3
+    - text: Answer 4
+      is_correct: false
+      likelihood: 1
+      id: 4
+    - text: Answer 5
+      is_correct: false
+      likelihood: 1
+      id: 5
+    grader: linear
+  '11':
+    text: 'Question #11'
+    num_answers: 5
+    num_correct_answers: 3
+    is_multiple_choice: true
+    likelihood: 1
+    points: 3
+    answers:
+    - text: Correct Answer 1
+      is_correct: true
+      likelihood: 1
+      id: 1
+    - text: Correct Answer 2
+      is_correct: true
+      likelihood: 1
+      id: 2
+    - text: Correct Answer 3
+      is_correct: true
+      likelihood: 1
+      id: 3
+    - text: Answer 4
+      is_correct: false
+      likelihood: 1
+      id: 4
+    - text: Answer 5
+      is_correct: false
+      likelihood: 1
+      id: 5
+    grader: binary
+question_defaults:
+  id: ''
+  text: ''
+  num_answers: 4
+  num_correct_answers: 1
+  is_multiple_choice: false
+  likelihood: 1
+  points: 1
+  grader: binary

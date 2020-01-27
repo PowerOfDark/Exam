@@ -1,0 +1,188 @@
+#:import os os
+
+<VerticalGrid>:
+    # provides maximum width and minimal height to fit children
+    orientation: 'vertical'
+    size_hint: (1, None)
+    height: self.minimum_height
+
+<HorizontalGrid>:
+    orientation: 'horizontal'
+    size_hint: (1, None)
+    height: self.minimum_height
+
+<Label>:
+    # black text color
+    color: 0, 0, 0, 1
+
+<Button>:
+    # white text color
+    color: 1, 1, 1, 1
+
+
+<TextLabel>:
+    # limited by width; grows vertically
+    size_hint_y: None
+    text_size: self.width, None
+    height: self.texture_size[1]
+
+<HorizontalTextLabel>:
+    # limited by height; grows horizontally
+    size_hint_x: None
+    text_size: None, self.height
+    width: self.texture_size[0]
+
+
+<ExamInfo>:
+    orientation: 'vertical'
+    TextLabel:
+        text: 'Info'
+    GridLayout:
+        cols: 1
+        pos_hint: {'x': 0.05}
+        size_hint_y: None
+        height: self.minimum_height
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: '30dp'
+            TextLabel:
+                size_hint: (None, 1)
+                text: "Your name: "
+                valign: 'center'
+            TextInput:
+                multiline: False
+                size_hint: (None, 1)
+                width: '200dp'
+                on_text: app.exam.user_name = self.text
+                text: (app.exam and app.exam.user_name) or ''
+        TextLabel:
+            text: 'Questions: ' +  str(len(app.exam.questions))
+        TextLabel:
+            text: 'Score: ' + (app.score_str or '')
+        TextLabel:
+            text: 'Completed: ' + (app.exam and app.score_str and str(app.exam.completed_at)) or ''
+
+
+<ExamHeader>:
+    orientation: 'vertical'
+    height: '150dp'
+    size_hint_y: None
+    TextLabel:
+        # NOTE: kivy supports f-strings, but they aren't observable
+        text: app.exam.title + ' (' + str(app.exam.generated_at) + ')'
+        halign: 'center'
+    TextLabel:
+        text: app.exam.description or ''
+        halign: 'center'
+    ExamInfo
+
+<ExamAnswer>:
+    HorizontalGrid:
+        spacing: 5
+        CheckBox:
+            color: 0, 0, 0, 1  # black
+            size_hint: (None, 1)
+            width: '20dp'
+            active: root.is_selected
+            on_active: root.on_checked(self.active)
+            group: root.grouping  # decides whether it's a radio-box instead
+        TextLabel:
+            canvas.before:
+                Color:
+                    # highlight correct answer with lime color
+                    rgba: (0.8, 1.0, 0.56, 1) if root.is_correct and app.should_grade else (0, 0, 0, 0)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            text: (root.answer and root.answer.text) or ''
+
+<ExamQuestion>:
+    canvas.before:
+        Color:
+            rgba: 0.702, 0.898, 0.988, 0.75  # light cyan
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    HorizontalGrid:
+        spacing: 5
+        HorizontalTextLabel:
+            valign: 'top'
+            text: str(root.num) + '. (' + root.points_str + ')'
+        TextLabel:
+            size_hint: (1, None)
+            text: root.text
+    VerticalGrid:
+
+<ExamQuestions>:
+    TextLabel:
+        text: 'Questions'
+    VerticalGrid:
+        size_hint: (0.975, None)
+        pos_hint: {'center_x': 0.5}
+        spacing: 10
+
+<ExamView>:
+    spacing: 25
+    VerticalGrid:
+        id: container
+        size_hint_x: 0.99
+        pos_hint: {'center_x': 0.5}
+        spacing: 25
+        ExamHeader:
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'center'
+        size_hint_y: None
+        height: 30
+        HorizontalGrid:
+            size_hint: (None, 1)
+            Button:
+                size_hint: (None, 1)
+                width: 50
+                text: 'Save'
+                on_press: app.save_prompt()
+            Button:
+                size_hint: (None, 1)
+                width: 50
+                text: 'Clear'
+                on_press: app.clear_exam()
+
+<ScrollView>:
+    bar_width: 10
+    bar_inactive_color: self.bar_color
+    canvas.before:
+        Color:
+            rgba: 0.89, 0.95, 0.992, 1  # main background; light gray/cyan
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+# based on https://kivy.org/doc/stable/api-kivy.uix.filechooser.html
+<SaveDialog>:
+    text_input: text_input
+    BoxLayout:
+        size: root.size
+        pos: root.pos
+        orientation: "vertical"
+        FileChooserListView:
+            id: filechooser
+            on_selection: text_input.text = self.selection and self.selection[0] or ''
+            path: os.getcwd()
+
+        TextInput:
+            id: text_input
+            size_hint_y: None
+            height: 30
+            multiline: False
+
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+            Button:
+                text: "Cancel"
+                on_release: root.cancel()
+
+            Button:
+                text: "Save"
+                on_release: root.save(filechooser.path, text_input.text)

@@ -1,0 +1,29 @@
+uuid: 541626a0-1528-453f-888b-40ca42e67793
+title: My problem set
+questions:
+  easy1:
+    text: 2+2=
+    num_answers: 2
+    num_correct_answers: 1
+    is_multiple_choice: false
+    likelihood: 1
+    points: 1
+    answers:
+    - text: '4'
+      is_correct: true
+      likelihood: 1
+      id: 1
+    - text: '3'
+      is_correct: false
+      likelihood: 1
+      id: 2
+    grader: binary
+question_defaults:
+  id: ''
+  text: ''
+  num_answers: 4
+  num_correct_answers: 1
+  is_multiple_choice: false
+  likelihood: 1
+  points: 1
+  grader: binary

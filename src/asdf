@@ -1,0 +1,208 @@
+meta_uuid: 795605c8-af43-4a1c-9e64-96fa6ee7dc94
+generated_at: '2020-01-27T03:09:07.616335'
+questions:
+- id: '11'
+  text: 'Question #11'
+  is_multiple_choice: true
+  answers:
+  - id: 1
+    text: Correct Answer 1
+    is_selected: false
+  - id: 5
+    text: Answer 5
+    is_selected: false
+  - id: 2
+    text: Correct Answer 2
+    is_selected: false
+  - id: 3
+    text: Correct Answer 3
+    is_selected: false
+  - id: 4
+    text: Answer 4
+    is_selected: false
+  points: 3
+- id: '5'
+  text: 'Question #5'
+  is_multiple_choice: true
+  answers:
+  - id: 4
+    text: Correct Answer 4
+    is_selected: false
+  - id: 5
+    text: Answer 5
+    is_selected: false
+  - id: 2
+    text: Correct Answer 2
+    is_selected: false
+  - id: 1
+    text: Correct Answer 1
+    is_selected: false
+  - id: 3
+    text: Correct Answer 3
+    is_selected: false
+  points: 2
+- id: '8'
+  text: 'Question #8'
+  is_multiple_choice: true
+  answers:
+  - id: 3
+    text: Correct Answer 3
+    is_selected: false
+  - id: 2
+    text: Correct Answer 2
+    is_selected: false
+  - id: 1
+    text: Correct Answer 1
+    is_selected: false
+  - id: 5
+    text: Answer 5
+    is_selected: false
+  - id: 4
+    text: Correct Answer 4
+    is_selected: false
+  points: 2
+- id: '4'
+  text: 'Question #4'
+  is_multiple_choice: false
+  answers:
+  - id: 5
+    text: Answer 5
+    is_selected: false
+  - id: 2
+    text: Answer 2
+    is_selected: false
+  - id: 1
+    text: Correct Answer 1
+    is_selected: false
+  - id: 4
+    text: Answer 4
+    is_selected: false
+  - id: 3
+    text: Answer 3
+    is_selected: false
+  points: 1
+- id: '0'
+  text: 'Question #0'
+  is_multiple_choice: false
+  answers:
+  - id: 3
+    text: Answer 3
+    is_selected: false
+  - id: 5
+    text: Answer 5
+    is_selected: false
+  - id: 1
+    text: Correct Answer 1
+    is_selected: false
+  - id: 2
+    text: Answer 2
+    is_selected: false
+  - id: 4
+    text: Answer 4
+    is_selected: false
+  points: 1
+- id: '10'
+  text: 'Question #10'
+  is_multiple_choice: false
+  answers:
+  - id: 5
+    text: Answer 5
+    is_selected: false
+  - id: 1
+    text: Correct Answer 1
+    is_selected: false
+  - id: 4
+    text: Answer 4
+    is_selected: false
+  - id: 3
+    text: Answer 3
+    is_selected: false
+  - id: 2
+    text: Answer 2
+    is_selected: false
+  points: 5
+- id: '2'
+  text: 'Question #2'
+  is_multiple_choice: true
+  answers:
+  - id: 4
+    text: Answer 4
+    is_selected: false
+  - id: 2
+    text: Correct Answer 2
+    is_selected: false
+  - id: 3
+    text: Answer 3
+    is_selected: false
+  - id: 1
+    text: Correct Answer 1
+    is_selected: false
+  - id: 5
+    text: Answer 5
+    is_selected: false
+  points: 1
+- id: '9'
+  text: 'Question #9'
+  is_multiple_choice: false
+  answers:
+  - id: 2
+    text: Answer 2
+    is_selected: false
+  - id: 5
+    text: Answer 5
+    is_selected: false
+  - id: 3
+    text: Answer 3
+    is_selected: false
+  - id: 4
+    text: Answer 4
+    is_selected: false
+  - id: 1
+    text: Correct Answer 1
+    is_selected: false
+  points: 1
+- id: '1'
+  text: 'Question #1'
+  is_multiple_choice: true
+  answers:
+  - id: 5
+    text: Answer 5
+    is_selected: false
+  - id: 2
+    text: Correct Answer 2
+    is_selected: false
+  - id: 3
+    text: Correct Answer 3
+    is_selected: false
+  - id: 4
+    text: Answer 4
+    is_selected: false
+  - id: 1
+    text: Correct Answer 1
+    is_selected: false
+  points: 4
+- id: '7'
+  text: 'Question #7'
+  is_multiple_choice: true
+  answers:
+  - id: 3
+    text: Answer 3
+    is_selected: false
+  - id: 1
+    text: Correct Answer 1
+    is_selected: false
+  - id: 4
+    text: Answer 4
+    is_selected: false
+  - id: 5
+    text: Answer 5
+    is_selected: false
+  - id: 2
+    text: Correct Answer 2
+    is_selected: false
+  points: 1
+title: Sprawdzian
+description: Powodzenia!
+was_user_completed: true
+user_name: asd
+completed_at: '2020-01-27T03:09:39.089980'

@@ -1,0 +1,6 @@
+num_answers: 4
+num_correct_answers: 1
+is_multiple_choice: no
+likelihood: 1
+points: 1
+grader: "binary"
