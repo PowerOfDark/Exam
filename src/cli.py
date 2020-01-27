@@ -140,7 +140,8 @@ def add_question(meta, id, **kwargs):
         meta.insert_question(False, id, **args)
     except KeyError as ex:
         raise click.ClickException("Invalid question ID") from ex
-
+    
+    click.echo(f"Question `{id}` added successfully")
     save_meta(meta)
 
 
@@ -172,7 +173,7 @@ def edit_question(meta, id, **kwargs):
     args = get_params(**kwargs)
     meta.insert_question(True, id, **args)
 
-    click.echo(f"Question `{id}` was successfully updated")
+    click.echo(f"Question `{id}` updated successfully")
     save_meta(meta)
 
 
@@ -246,6 +247,7 @@ def add_answer(meta, question_id, text, correct, likelihood, id):
     question = meta.find_question(question_id)
     question.insert_answer(id, text=text, likelihood=likelihood, **optional)
 
+    click.echo(f"Answer `{id}` updated successfully")
     save_meta(meta)
 
 
