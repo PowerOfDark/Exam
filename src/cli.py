@@ -140,7 +140,7 @@ def add_question(meta, id, **kwargs):
         meta.insert_question(False, id, **args)
     except KeyError as ex:
         raise click.ClickException("Invalid question ID") from ex
-    
+
     click.echo(f"Question `{id}` added successfully")
     save_meta(meta)
 
@@ -409,7 +409,7 @@ def grade_exams(meta, directory, plot, display_questions):
     if len(user_scores) == 0:
         click.echo('No valid exams found')
         return
-        
+
     if display_questions:
         display_question_stats(meta, question_stats)
     display_user_stats(user_scores)
