@@ -409,8 +409,8 @@ def grade_exams(meta, directory, plot, display_questions):
     if len(user_scores) == 0:
         click.echo('No valid exams found')
         return
-
-    display_user_stats(user_scores)
+        
     if display_questions:
         display_question_stats(meta, question_stats)
+    display_user_stats(user_scores)
     display_general_stats([score for score, *_ in user_scores.values()], max_score, plot)
