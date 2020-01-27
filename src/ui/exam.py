@@ -52,11 +52,9 @@ class ExamAnswer(VerticalGrid):
     def __init__(self, answer_meta, answer, grouping, **kwargs):
         super(ExamAnswer, self).__init__(**kwargs)
         self.bind(is_selected=wrap_action(self.save_changes))
-        get_app().bind(exam=wrap_action(self.build))
         self.answer_meta = answer_meta
         self.answer = answer
         self.grouping = grouping
-        self.build()
 
     @property
     def exam_question(self):
@@ -93,9 +91,8 @@ class ExamQuestion(VerticalGrid):
     def __init__(self, question_meta, question, num, **kwargs):
         super(ExamQuestion, self).__init__(**kwargs)
 
-        build = wrap_action(self.build)
         update = wrap_action(self.update)
-        get_app().bind(should_grade=update, on_answer_changed=update, exam=build)
+        get_app().bind(should_grade=update, on_answer_changed=update)
 
         self.container = get_container(self)
 
@@ -103,7 +100,6 @@ class ExamQuestion(VerticalGrid):
         self.answers = set()
         self.question_meta = question_meta
         self.question = question
-        self.build()
 
     def clear(self):
         for widget in self.answers:
@@ -123,7 +119,7 @@ class ExamQuestion(VerticalGrid):
         # add checkbox grouping if there's only one answer
         grouping = None if self.question.is_multiple_choice else str(self.question.id)
         widget = ExamAnswer(ans_meta, answer, grouping)
-
+        widget.build()
         self.container.add_widget(widget)
         self.answers.add(widget)
 
@@ -173,6 +169,7 @@ class ExamQuestions(VerticalGrid):
         id = len(self.questions) + 1
 
         widget = ExamQuestion(q_meta, question, id)
+        widget.build()
         self.container.add_widget(widget)
         self.questions.add(widget)
 

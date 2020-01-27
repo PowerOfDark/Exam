@@ -141,12 +141,12 @@
                 size_hint: (None, 1)
                 width: 50
                 text: 'Save'
-                on_press: app.save_prompt()
+                on_release: app.save_prompt()
             Button:
                 size_hint: (None, 1)
                 width: 50
                 text: 'Clear'
-                on_press: app.clear_exam()
+                on_release: app.clear_exam()
 
 <ScrollView>:
     bar_width: 10
