@@ -85,7 +85,7 @@ $ ./main.py add-question -t "2+2=" -a 2 -c 1 --id easy1
 ```
 
 Oczywiście otrzymamy błąd, ponieważ nie podaliśmy ścieżki do naszej bazy pytań.
-Jedna z opcji to podanie ``--problem-set`` (lub ``-s``) w każdym poleceniu; druga to zdefinie zmiennej środowiskowej:
+Jedna z opcji to podanie ``--problem-set`` (lub ``-s``) w każdym poleceniu; druga to zdefiniowanie zmiennej środowiskowej:
 
 ```bash
 $ export EXAM_PROBLEM_SET=problems.yml;
