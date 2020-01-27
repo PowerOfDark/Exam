@@ -2,17 +2,19 @@
 
 Wymagania:
 
-* Python 3.7.x
+* Python 3.7.x (*Kivy* nie wspiera Pythona 3.8)
 * platforma Linux/Windows/Mac x64
 
-Zacznij od sklonowania tego repozytorium:
+1. Zacznij od sklonowania tego repozytorium:
+
 ```bash
 git clone https://github.com/PowerOfDark/Exam && cd Exam
 ```
 
-Przed następnym krokiem zalecane jest stworzenia środowiska *virtualenv*.
+2. *Opcjonalnie:* utwórz środowisko *virtualenv*
+3. *Dla platformy Windows:* zainstaluj bibliotekę [Kivy](https://kivy.org/doc/stable/installation/installation-windows.html)
 
-Zainstaluj wymagane pakiety:
+4. Zainstaluj wymagane pakiety:
 
 ```bash
 python3 -m pip install --upgrade --user pip setuptools
@@ -45,8 +47,8 @@ question_defaults: # Parametry domyślne podczas tworzenia pytania
   likelihood: 1	 # prawdopodobieństwo wylosowania
   points: 1  # maksymalna liczba punktów
   grader: binary  # typ oceniania (graders.py)
-# 'binary' - 0 lub maks. gdy wszystko dobrze
-# 'linear' - proporcjonalnie do liczby dobrych
+# 'binary' - 0 lub maks. gdy wszystko poprawnie
+# 'linear' - proporcjonalnie do liczby poprawnych odpowiedzi
 ```
 
 
@@ -125,7 +127,7 @@ questions:
 ...
 ```
 
-Warto wspomnieć, że w wierszu poleceń nie istnieje opcja usunięcia pytania (żeby nie popsuć wcześniej generowanych sprawdzianów) -- zalecany sposób na pozbycie się pytania/odpowiedzi to ustawienie ``likelihood: 0``
+Warto wspomnieć, że w wierszu poleceń nie istnieje opcja usunięcia pytania (żeby nie popsuć wcześniej generowanych sprawdzianów) -- zalecany sposób na pozbycie się pytania/odpowiedzi to ustawienie ``likelihood: 0``.
 
 ### Sprawdziany
 
@@ -163,4 +165,4 @@ Mean score: 16.7 / 21.0 (79.4%)
 Median score: 20.0 / 21.0 (95.2%)
 ```
 
-Dodatkowo przełącznik ``-p`` wyświetli histogram wyników. Możliwe jest również podsumowanie punktów wg. pytań (``-q``)
+Dodatkowo przełącznik ``-p`` wyświetli histogram wyników. Możliwe jest również podsumowanie punktów wg. pytań (``-q``).
