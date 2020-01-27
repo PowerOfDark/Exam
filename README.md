@@ -5,7 +5,7 @@ Wymagania:
 * Python 3.7.x
 * platforma Linux/Windows/Mac x64
 
-Wypakuj otrzymane archiwum do łatwo dostępnego folderu; otwórz tam terminal i wykonaj polecenia:
+Wykonaj polecenia:
 
 ```bash
 python3 -m pip install --upgrade --user pip setuptools
