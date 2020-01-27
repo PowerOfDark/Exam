@@ -43,7 +43,7 @@ def load_exam(path: str) -> Exam:
             exam = related.from_yaml(file, Exam)
             return exam
     except Exception as ex:
-        raise click.ClickException(f"Invalid exam file ({ex})") from ex
+        raise click.ClickException(f"Invalid exam file `{path}` ({ex})") from ex
 
 
 @click.group()
@@ -59,7 +59,7 @@ def cli(ctx, problem_set):
             ctx.obj = meta
             meta.source = problem_set
         except Exception as ex:
-            raise click.ClickException(f"Invalid problem set ({ex})") from ex
+            raise click.ClickException(f"Invalid problem set `{problem_set}` ({ex})") from ex
     elif ctx.invoked_subcommand not in COMMANDS_WITHOUT_PROBLEM_SET:
         if '--help' not in sys.argv:  # check if 'help' requested
             require_meta(ctx.obj)
