@@ -39,7 +39,7 @@ def get_app():
 
 
 NO_SCORE = -1e9
-"""Constant that represents invalid question/exam score"""
+"""int: Constant that represents invalid question/exam score"""
 
 
 class ExamAnswer(VerticalGrid):
@@ -55,6 +55,8 @@ class ExamAnswer(VerticalGrid):
         self.answer_meta = answer_meta
         self.answer = answer
         self.grouping = grouping
+
+        self.build()
 
     @property
     def exam_question(self):
@@ -101,6 +103,8 @@ class ExamQuestion(VerticalGrid):
         self.question_meta = question_meta
         self.question = question
 
+        self.build()
+
     def clear(self):
         for widget in self.answers:
             self.container.remove_widget(widget)
@@ -119,7 +123,7 @@ class ExamQuestion(VerticalGrid):
         # add checkbox grouping if there's only one answer
         grouping = None if self.question.is_multiple_choice else str(self.question.id)
         widget = ExamAnswer(ans_meta, answer, grouping)
-        widget.build()
+
         self.container.add_widget(widget)
         self.answers.add(widget)
 
@@ -149,6 +153,7 @@ class ExamQuestions(VerticalGrid):
         self.questions = set()
         self.exam_meta = app.exam_meta
         self.exam = app.exam
+
         self.build()
 
     def clear(self):
@@ -169,7 +174,7 @@ class ExamQuestions(VerticalGrid):
         id = len(self.questions) + 1
 
         widget = ExamQuestion(q_meta, question, id)
-        widget.build()
+
         self.container.add_widget(widget)
         self.questions.add(widget)
 
@@ -237,6 +242,8 @@ class ExamApp(App):
         self.property('exam').dispatch(self)
         self.should_grade = False
 
+        self.alert("The exam has been cleared", title="Notice", size=(300, 100))
+
     def save_prompt(self):
         """Opens save prompt"""
         content = SaveDialog(save=self.save_prompt_callback, cancel=self.dismiss_popup)
@@ -257,7 +264,7 @@ class ExamApp(App):
             self.exam.was_user_completed = True
             self.should_grade = self.exam_meta is not None
         else:
-            self.alert("Exam saved without user name", title="Notice", size=(250, 100))
+            self.alert("Exam was saved without user name", title="Notice", size=(300, 100))
 
         try:
             self.exam.save(self.save_location)
